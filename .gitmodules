@@ -1,0 +1,3 @@
+[submodule "cs-magiconion-shared"]
+	path = cs-magiconion-shared
+	url = https://github.com/irumaru/cs-magiconion-shared.git
