@@ -1,2 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Grpc.Net.Client;
+using MagicOnion.Client;
+using Hello.Shared;
+//using Microsoft.AspNetCore.Mvc;
+
+var channel = GrpcChannel.ForAddress("http://localhost:5000");
+
+var client = MagicOnionClient.Create<IHelloService>(channel);
+
+var result = await client.SayAsync("World");
+Console.WriteLine(result);
