@@ -4,7 +4,7 @@ using Hello.Shared;
 using Grpc.Core;
 //using Microsoft.AspNetCore.Mvc;
 
-string address = "http://localhost:5000";
+string address = "http://localhost:5001";
 
 Console.WriteLine($"Connect server: {address}");
 var channel = GrpcChannel.ForAddress(address);
